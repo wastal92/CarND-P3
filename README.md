@@ -36,10 +36,13 @@ The model.py file contains the code for training and saving the convolution neur
 #### 1.	Training data
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. I used the center camera images and the corresponding steering angles as the measurement. Here is an example image of center lane driving:
+
 ![centerimage][https://github.com/wastal92/CarND-P3/blob/master/pictures/center.jpg]
 
 Then I used left and right camera images by adding a correction of 0.25 and subtracting the same correction respectively. As result, I obtained three times as many training data as I only used the center camera images. Here are the examples of left and right camera images:
+
 ![leftimage][https://github.com/wastal92/CarND-P3/blob/master/pictures/left.jpg]
+
 ![rightimage][https://github.com/wastal92/CarND-P3/blob/master/pictures/right.jpg]
 
 Finally, I had 10605 examples in the data set and I randomly shuffled it before put 20% of the data into a validation set.

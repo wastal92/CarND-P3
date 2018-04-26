@@ -82,5 +82,6 @@ My final model consisted of the following layers:
 |Fully connected(output)	|inputs 10, outputs 1|
 
 I used dropout and batch normalization layer to avoid overfitting. The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 88-90). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+
 I used adam optimizer, mean square error as loss function and batch size of 64 to train the model for 40 epochs.
 

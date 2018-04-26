@@ -54,4 +54,33 @@ My final model consisted of the following layers:
 |Layer|Description|
 |-----|---------|
 |Input |160×320×3 images|
+|Lambda Layer|	Normalize the image data|
+|Cropping Layer	|Crop the image to 90×320×3|
+|Convolution 24@5×5|	2×2 stride, valid padding, outputs 43×158×24|
+|Batch Normalization	|             |
+|RELU	|          |
+|Convolution 36@5×5|	2×2 stride, valid padding, outputs 20×77×36|
+|Batch Normalization	|         |
+|RELU	|     |
+|Dropout|	dropout rate 0.3|
+|Convolution 48@5×5	|2×2 stride, valid padding, outputs 8×37×48|
+|Batch Normalization	|       |
+|RELU	|     |
+|Dropout	|dropout rate 0.4|
+|Convolution 64@3×3	|1×1 stride, valid padding, outputs 6×35×64|
+|Batch Normalization	|   |
+|RELU	|  |
+|Dropout	|dropout rate 0.5|
+|Convolution 64@3×3	|1×1 stride, valid padding, outputs 4×33×64|
+|Batch Normalization	|    |
+|RELU	|  |
+|Dropout	|dropout rate 0.5|
+|Flatten	|    |
+|Fully connected	|inputs 8448, outputs 100|
+|Fully connected	|inputs 100, outputs 50|
+|Fully connected|	inputs 50, outputs 10|
+|Fully connected(output)	|inputs 10, outputs 1|
+
+I used dropout and batch normalization layer to avoid overfitting. The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 88-90). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+I used adam optimizer, mean square error as loss function and batch size of 64 to train the model for 40 epochs.
 
